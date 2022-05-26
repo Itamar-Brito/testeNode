@@ -1,4 +1,5 @@
 const os= require('os')
+const log = require('./logger')
 
 setInterval( () => {
 
@@ -20,6 +21,7 @@ setInterval( () => {
     console.log("========== PC STATS ========== ")
     console.table(stats)
 
+    log( ` ${JSON.stringify(stats)} \n` )
 
 },1000)
 
